@@ -210,14 +210,6 @@ Debian/Ubuntu
 
    -  Build Percona Server for MongoDB from ``buildscripts/scons.py``.
       
-      - With features included in Percona Supported Builds:
-      
-      .. code:: sh   
-
-         buildscripts/scons.py --disable-warnings-as-errors --release --ssl --opt=on -j$(nproc --all) --use-sasl-client --wiredtiger --audit --inmemory --hotbackup --enable-fipsmode CPPPATH="${AWS_LIBS}/include" LIBPATH="${AWS_LIBS}/lib ${AWS_LIBS}/lib64" install-mongod install-mongos install-mongo
-
-      - Without features included in Percona Supported Builds:
-
       .. code:: sh   
 
          buildscripts/scons.py --disable-warnings-as-errors --release --ssl --opt=on -j$(nproc --all) --use-sasl-client --wiredtiger --audit --inmemory --hotbackup CPPPATH="${AWS_LIBS}/include" LIBPATH="${AWS_LIBS}/lib ${AWS_LIBS}/lib64" install-mongod install-mongos install-mongo
@@ -315,14 +307,8 @@ Red Hat Enterprise Linux and derivatives
 
       cd percona-server-mongodb
 
-   - With features included in Percona Supported Builds:
-      
-   .. code:: sh  
-
-      buildscripts/scons.py --disable-warnings-as-errors --release --ssl --opt=on -j$(nproc --all) --use-sasl-client --wiredtiger --audit --inmemory --hotbackup --enable-fipsmode CPPPATH="${AWS_LIBS}/include" LIBPATH="${AWS_LIBS}/lib ${AWS_LIBS}/lib64" install-mongod install-mongos install-mongo
-
-   - Without features included in Percona Supported Builds:
-
+   - Build Percona Server for MongoDB from ``buildscripts/scon
+     
    .. code:: sh   
 
    buildscripts/scons.py --disable-warnings-as-errors --release --ssl --opt=on -j$(nproc --all) --use-sasl-client --wiredtiger --audit --inmemory --hotbackup CPPPATH="${AWS_LIBS}/include" LIBPATH="${AWS_LIBS}/lib ${AWS_LIBS}/lib64" install-mongod install-mongos install-mongo
